@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Jal_Onuel';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --primary: #8e24aa;
+  --primary-light: #c158dc;
+  --primary-dark: #5c007a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jal_Onuel';
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* common */
+.shadow {
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+#app {
+  border: 1px solid var(--primary-light);
+  padding: 25px;
+  border-radius: 25px;
+  background: white;
+}
+/* 제목 */
+.app-title {
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  padding: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+/* 메세지창 */
+.message {
+  position: relative;
+  height: 50px;
+  color: white;
+  border: 1px solid var(--primary-dark);
+  background: var(--primary);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+/* 볼컨테이너 */
+.app-contanier {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(150,150,150,1) 0%, rgba(50,50,50,1) 100%);
+  border-radius: 50%;
+
+}
+/* 볼 */
+.ball {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 14px;
+  display: flex;
+  transition: 375ms;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+
+}
+.ball.num {
+  color: white;
+  background: #d63031;
+}
+.ball.num10 {
+  color: white;
+  background: #e17055;
+}
+.ball.num20 {
+  color: white;
+  background: #fdcb6e;
+}
+.ball.num30 {
+  color: white;
+  background: #00cec9;
+}
+.ball.num40 {
+  color: white;
+  background: #0984e3;
+}
+/* button group */
+.app-btn-group {
+  text-align: center;
+  padding: 1rem;
+}
+.btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: white;
+  background: var(--primary);
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--primary-dark);
+}
+/* message */
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  padding: 1rem;
+}
+/* picker */
+.picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 50px;
+}
+.picker .ball {
+  position: static;
+  width: 30px;
+  margin-right: 10px;
+  height: 30px;
+  transform: none !important;
+}
+.picker .ball:last-child {
+  margin-right: 0px;
+}
