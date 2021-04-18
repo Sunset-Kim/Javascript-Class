@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <title>본격! 생활밀착형 오늘 뭐 먹지?</title>
+</head>
+<body>
+    <div id="app">
+        <div class="app-title">
+            <h1 class="visually-hidden">오늘 뭐 먹지?</h1>
+            <h2 class="app-title-effect-container">
+                <span>오</span>
+                <span>늘</span>
+                <span>,</span>
+                <span>&nbsp;</span>
+                <span>뭐</span>
+                <span>&nbsp;</span>
+                <span>먹</span>
+                <span>지</span>
+                <span>?</span>
+            </h2>
+            <div class="audio on">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </div>
+        </div>
+       
+            <!-- main section -->
+            <section class="app-main">
+                <div class="list-container">
+                    <ul class="type-list food">
+                        <li class="food-item active">한식</li>
+                        <li class="food-item">일식</li>
+                        <li class="food-item">중식</li>
+                        <li class="food-item">양식</li>
+                    </ul>
+                    <div class="arrow-container food">
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+        
+                <div class="list-container">
+                    <ul class="type-list spicy">
+                        <li class="spicy-item active">매운</li>
+                        <li class="spicy-item">안 매운</li>
+                    </ul>
+                    <div class="arrow-container spicy">
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+                
+                <div class="list-container">
+                    <ul class="type-list shape">
+                        <li class="shape-item active">빵</li>
+                        <li class="shape-item">밥</li>
+                        <li class="shape-item">면</li>
+                        <li class="shape-item">떡</li>
+                    </ul>
+                    <div class="arrow-container shape">
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+                
+        
+                <div class="list-container">
+                    <ul class="type-list hot">
+                        <li class="hot-item active">뜨거운</li>
+                        <li class="hot-item">차가운</li>
+                    </ul>
+                    <div class="arrow-container hot">
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+            </section>
+            <div class="button-group">
+                <button class="btn btn-random" type="button">돌려돌려 돌림판!</button>
+            </div>
+            <!-- app-info -->
+            <section class="app-info">
+                <div class="message-group">
+                    <div class="message">
+                        메뉴를 직접 선택하거나<br>
+                        돌림판을 돌려보라구!
+                    </div>
+                    <div class="message-img">
+                        <img src="./img/dog.jpg" alt="요정이">
+                    </div>
+                </div>
+                <div class="option-container">
+                    <h3 class="title">[고오급 옵션]</h3>
+                    <div class="option-group fixed">
+                        <h4 class="opt-title">고정하기</h4>
+                        <ul>
+                            <li>
+                                <input id="opt-food" type="checkbox">
+                                <label for="opt-food">나라 별</label>
+                            </li>
+                            <li>
+                                <input id="opt-spicy" type="checkbox">
+                                <label for="opt-spicy">맵기</label>
+                            </li>
+                            <li>
+                                <input id="opt-shape" type="checkbox">
+                                <label for="opt-shape">음식 모양</label>
+                            </li>
+                            <li>
+                                <input id="opt-hot" type="checkbox">
+                                <label for="opt-hot">음식 온도</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="option-group duration">
+                        <h4 class="opt-title">시간</h4>
+                        <ul>
+                            <li>
+                                <input id="opt-duration" type="number" min="1" value="3">
+                                <label for="opt-duration">초</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+    </div>
+    
+</body>
+</html>
