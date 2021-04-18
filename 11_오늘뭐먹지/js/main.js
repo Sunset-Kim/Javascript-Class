@@ -176,11 +176,12 @@ function selectRandom() {
             clearActive(arrow.parentNode.parentNode.children[0].children[0]);
             addActive();
             sendActive();
-            displayKeyword();
+            message.innerHTML = `뭘 고를까 생각중이다!<br> 기다려!`
         },1)        
         setTimeout(() => {
             clearInterval(loop);
             isSelecting = false;
+            displayKeyword();
         },opt.duration)
     }
 
