@@ -7,6 +7,7 @@ const optFood = document.querySelector('#opt-food');
 
 // common value
 let isSelecting = false;
+let autoPlay = false;
 const keyword = {
     food: '',
     randomFood: true,
@@ -193,5 +194,17 @@ function selectRandom() {
         opt.duration = input[4].value * 1000 ;
     }
 }
-
-
+// audio
+const btnAudio = document.querySelector('.opt-group.audio');
+const audio = new Audio('./asset/sound/song.mp3');
+audio.currentTime = 12.5;
+audio.loop = true;
+btnAudio.addEventListener('click', () => {
+    btnAudio.classList.toggle('on');
+    if(!autoPlay) {
+        audio.play();
+    } else {
+        audio.pause();
+        audio.currentTime = 12.5;
+    }
+});
